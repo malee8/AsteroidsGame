@@ -33,9 +33,6 @@ public void draw()
     if(key=='w'){
       bob.accelerate(.1);
     }
-    if(key=='s'){
-      ((Spaceship)bob).hyperspace();
-    }
   }
   bob.myXspeed=bob.myXspeed*0.99;
   bob.myYspeed=bob.myYspeed*0.99;
@@ -44,4 +41,9 @@ public void draw()
   for(int i=0;i<joe.length;i++){
     joe[i].show();
   }
+}
+public void keyReleased(){
+  if(key=='s'){
+      ((Spaceship)bob).hyperspace();
+    }
 }
